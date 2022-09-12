@@ -1,0 +1,53 @@
+<!doctype html>
+	<html>
+	<head>
+		<meta content='#000000' name='theme-color'/>
+		<style type="text/css">
+			body {
+				background-image: linear-gradient(to right, #25b7c2, #049db4);
+				font-family: Comic sans MS;
+				font-size : font-size: 1rem;
+    			line-height: 1.6;
+    			color : #ffffff;
+    			min-height : 95vh;
+  				display: flex;
+  				align-items: center;
+ 				 justify-content: center;
+			}
+			table {
+				border-color: #acf1f6;
+				background-color: #049db4;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- script javascript -->
+		<script language="javascript">
+			//variable
+			var pegawai = "Ridwan";
+			var jabatan = "Manajer";
+			var status = "Menikah";
+			//gaji pokok
+			let gajiPokok;
+			if(jabatan == "Manajer"){
+			gajiPokok = 15000000;
+			}
+			else if(jabatan == "Asisten Manager"){
+			gajiPokok = 1000000;
+			}
+			else if(jabatan == "Staff"){
+			gajiPokok = 5000000;
+			}
+			else{
+			};
+			//tunjangan jabatan
+			let tunjanganJabatan = 15/100 * gajiPokok;
+			//tunjangan keluarga
+			let tunjanganKeluarga = (status == "Menikah") ? 20/100*gajiPokok : 0;
+			//total gaji
+			let totalGaji = gajiPokok + tunjanganJabatan + tunjanganKeluarga;
+			//print
+			document.write("<table border = '1' cellspacing = '0' cellpadding = '10'><thead><tr><th>Pegawai</th><th>Jabatan</th><th>Status</th><th>Gaji Pokok</th><th>Tunjangan Jabatan</th><th>Tunjangan Keluarga</th></tr></thead><tbody><tr><td>" + pegawai + "</td><td>" + jabatan + "</td><td>" + status + "</td><td>" + gajiPokok + "</td><td>" + tunjanganJabatan + "</td><td>" + tunjanganKeluarga + "</td></tr></tbody><tfoot><tr><th colspan='6'>Total Gaji : " + totalGaji + "</th></tr></tfoot></table>");
+		</script>
+	</body>
+</html>
